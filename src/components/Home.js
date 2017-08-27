@@ -1,112 +1,198 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
+import $ from 'jquery';
 
 @inject("store")
 @observer
 export default class Home extends Component {
 	constructor(props) {
 		super(props);
-		this.store = this.props.store;
-	}
+    this.store = this.props.store;
+    this.state = {
+      formOn: false
+    }
+  }
+  
+  toggleForm() {
+    let tempState = this.state;
+    this.setState({
+      formOn: !tempState.formOn
+    })
+
+    if(this.state.formOn) {
+      $('.homeForm').slideDown();
+    } else {
+      $('.homeForm').slideUp();
+    }
+  }
 
 	render() {
-		const store = this.store;
+    const store = this.store;
+
 		return (
 			<div className="page home">
-				<header>
-					<div className="hero-unit">
-						<div className="react-logo" />
-						<h1>React MobX React-Router 4 Boilerplate</h1>
-					</div>
-					<div className="hero-subunit">
-						<h4>
-							A simple starting point for React with routing, data-fetching and state management!
-						</h4>
-					</div>
-					<div className="github-buttons">
-						<a
-							href="https://github.com/mhaagens/react-mobx-react-router4-boilerplate"
-							target="_blank"
-						>
-							Download from GitHub
-						</a>
-					</div>
-				</header>
-				<main>
-					<div className="section-header">
-						<h3>Included libraries</h3>
-						<hr />
-					</div>
-					<div className="boilerplate-item">
-						<div className="boilerplate-logo react" />
-						<div className="boilerplate-item-content">
-							<a
-								href="https://facebook.github.io/react/"
-								target="_blank"
-							>
-								<h4>React</h4>
-							</a>
-							<small>UI Library</small>
-							<p>
-								React makes it painless to create
-								{" "}
-								<br />
-								interactive UIs.
-							</p>
-						</div>
-					</div>
-					<div className="boilerplate-item">
-						<div className="boilerplate-logo mobx" />
-						<div className="boilerplate-item-content">
-							<a
-								href="http://mobxjs.github.io/mobx/"
-								target="_blank"
-							>
-								<h4>MobX</h4>
-							</a>
-							<small>Reactive State Management</small>
-							<p>
-								MobX is a battle tested library that makes state management simple and scalable.
-							</p>
-						</div>
-					</div>
-					<div className="boilerplate-item">
-						<div className="boilerplate-logo reactrouter" />
-						<div className="boilerplate-item-content">
-							<a
-								href="https://react-router.now.sh/"
-								target="_blank"
-							>
-								<h4>React Router 4</h4>
-							</a>
-							<small>Routing Library</small>
-							<p>
-								React Router is a declarative way to render, at any location, any UI that you and your team can think up.
-							</p>
-						</div>
-					</div>
-					<div className="boilerplate-item">
-						<div className="boilerplate-logo webpack" />
-						<div className="boilerplate-item-content">
-							<a href="http://webpack.github.io/" target="_blank">
-								<h4>Webpack 2</h4>
-							</a>
-							<small>Module Bundler</small>
-							<p>
-								Webpack takes modules with dependencies and generates static assets representing those modules.
-							</p>
-						</div>
-					</div>
-					<div className="section-header extras">
-						<h4>Extras</h4>
-						<hr />
-						<ul>
-							<li>✓ Async Component Loading</li>
-							<li>✓ Code-splitting</li>
-							<li>✓ Extracted and autoprefixed CSS</li>
-						</ul>
-					</div>
-				</main>
+        <div className='header'>
+          <div className='buttons'>
+            <a href='/prices'>
+              <div className='button'>
+                See our Prices
+              </div>
+            </a>
+            <div className='button' onClick={this.toggleForm.bind(this)}>
+              Make an Appointment
+            </div>
+          </div>
+        </div>
+
+        <div className='form homeForm'>
+          <form>
+            <input placeholder='Nvan:' />
+            <input placeholder='E-post:' />
+            <input placeholder='Telefon:' />
+            <textarea placeholder='Melding:'></textarea>
+            <input type='submit' />
+          </form>
+        </div>
+
+
+        <div className='aboutUs'>
+          <h1>Tannelege Homan Zandi</h1>
+          <h6>We Take Care of More Than Just Your Smile.</h6>
+          <hr />
+          <p>
+            Your dental health is very important to you, and therefore it is also very important to us.
+          </p>
+          <p>
+            Our staff make sure that we take extreme care when handling your dental highgene and we will do everything to make sure it is good.
+          </p>
+          <p>
+            Our Staff are friendly and will make sure that we accomadate your stay to be as pleasent as possible.
+          </p>
+          <p>
+            We have been in this buisness longer than anyone else in Oslo, and we know how to make sure that we finish your procedure as quickly as possible.
+          </p>
+        </div>
+
+        <div className='treatments'>
+          <h1>Our Treatments</h1>
+          <h6>Our Click on a Treatment to Find Out More.</h6>
+          <hr />
+
+          <div className='types'>
+            <div>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Estetisk tannpleie
+              </p>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Reparere tenner
+              </p>
+            </div>
+            <div>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Vanlige problemer
+              </p>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Hull i tennene
+              </p>
+            </div>
+            <div>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Tannløsning
+              </p>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Ny teknologi
+              </p>
+            </div>
+            <div>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Munnhygiene
+              </p>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Barn og ungdom
+              </p>
+            </div>
+            <div>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Tenner og graviditet
+              </p>
+              <p>
+                <i className="fa fa-stethoscope"></i>
+                Implantater
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className='team'>
+          <h1>Our Team</h1>
+          <h6>We Have the Best Dentists & Staff in Oslo.</h6>
+          <hr />
+          <div className='teamImages'>
+            <div className='teamImageContainer'>
+              <div className='img'></div>
+              <div className="overlay">
+                <div className='text'>
+                  <h3>Homan Zandi</h3>
+                  <h6>Tannlege</h6>
+                </div>
+              </div>
+            </div>
+            <div className='teamImageContainer'>
+              <div className='img' style={{'background-image': 'url("http://i.imgur.com/JTzrBGe.jpg")'}}></div>
+              <div className="overlay">
+                <div className='text'>
+                  <h3>Trude Bøe</h3>
+                  <h6>Tannlege</h6>
+                </div>
+              </div>
+            </div>
+            <div className='teamImageContainer'>
+              <div className='img' style={{'background-image': 'url("http://i.imgur.com/1ocAMHg.jpg")'}}></div>
+              <div className="overlay">
+                <div className='text'>
+                  <h3>Anders Valnes</h3>
+                  <h6>Tannlege</h6>
+                </div>
+              </div>
+            </div>
+            <div className='teamImageContainer'>
+              <div className='img' style={{'background-image': 'url("http://i.imgur.com/N4zbpxM.jpg")'}}></div>
+              <div className="overlay">
+                <div className='text'>
+                  <h3>Sindy Tran</h3>
+                  <h6>Tannpleier</h6>
+                </div>
+              </div>
+            </div>
+            <div className='teamImageContainer'>
+              <div className='img' style={{'background-image': 'url("http://i.imgur.com/glLTaxE.jpg")'}}></div>
+              <div className="overlay">
+                <div className='text'>
+                  <h3>Rounak Karimi</h3>
+                  <h6>Tannlegeassistent</h6>
+                </div>
+              </div>
+            </div>
+            <div className='teamImageContainer'>
+              <div className='img' style={{'background-image': 'url("http://i.imgur.com/URi9WyD.jpg")'}}></div>
+              <div className="overlay">
+                <div className='text'>
+                  <h3>Jenny Gonzalez Solhaug</h3>
+                  <h6>Tannlegeassistent</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
 		);
 	}
