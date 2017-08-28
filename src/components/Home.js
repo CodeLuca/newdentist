@@ -81,52 +81,72 @@ export default class Home extends Component {
           <div className='types'>
             <div>
               <p>
-                <i className="fa fa-stethoscope"></i>
-                Estetisk tannpleie
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Estetisk tannpleie
+                </a>
               </p>
               <p>
-                <i className="fa fa-stethoscope"></i>
-                Reparere tenner
-              </p>
-            </div>
-            <div>
-              <p>
-                <i className="fa fa-stethoscope"></i>
-                Vanlige problemer
-              </p>
-              <p>
-                <i className="fa fa-stethoscope"></i>
-                Hull i tennene
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Reparere tenner
+                </a>
               </p>
             </div>
             <div>
               <p>
-                <i className="fa fa-stethoscope"></i>
-                Tannløsning
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Vanlige problemer
+                </a>
               </p>
               <p>
-                <i className="fa fa-stethoscope"></i>
-                Ny teknologi
-              </p>
-            </div>
-            <div>
-              <p>
-                <i className="fa fa-stethoscope"></i>
-                Munnhygiene
-              </p>
-              <p>
-                <i className="fa fa-stethoscope"></i>
-                Barn og ungdom
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Hull i tennene
+                </a>
               </p>
             </div>
             <div>
               <p>
-                <i className="fa fa-stethoscope"></i>
-                Tenner og graviditet
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Tannløsning
+                </a>
               </p>
               <p>
-                <i className="fa fa-stethoscope"></i>
-                Implantater
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Ny teknologi
+                </a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Munnhygiene
+                </a>
+              </p>
+              <p>
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Barn og ungdom
+                </a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Tenner og graviditet
+                </a>
+              </p>
+              <p>
+                <a href='/treatment/tannpleie'>
+                  <i className="fa fa-stethoscope"></i>
+                  Implantater
+                </a>
               </p>
             </div>
           </div>

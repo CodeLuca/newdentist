@@ -52,6 +52,13 @@ export default class App extends Component {
               <LazyRoute {...props} component={import("./Prices")} />
             )}
           />
+          <Route
+            exact
+            path="/treatment/tannpleie"
+            render={props => (
+              <LazyRoute {...props} component={import("./Treatment")} />
+            )}
+          />
         </div>
         <div id="mySidenav" className="sidenav">
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeSideBar.bind(this)}>&times;</a>

@@ -118,6 +118,10 @@
       align-items: center;
       text-align: center;
     }
+
+    a:hover {
+      opacity: .5;
+    }
   }
 
   .aboutUs, .team {

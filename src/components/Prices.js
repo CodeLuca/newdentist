@@ -9,7 +9,7 @@ export default class Home extends Component {
 		super(props);
     this.store = this.props.store;
     this.state = {
-      formOn: false
+      formOn: true
     }
   }
   
