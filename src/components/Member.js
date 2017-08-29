@@ -41,11 +41,11 @@ export default class Treatment extends Component {
         
         <div className='treatmentContainer'>
           <div className='side'>
-            <div className='link active'>
-              <a href='/team'>
+            <a href='/team'>
+            <div className='link'>
               View all members
-              </a>
             </div>
+            </a>
             <div className='link active'>
               <a>
               Tannelege Homan Zandi
