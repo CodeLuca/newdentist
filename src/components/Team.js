@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 @inject("store")
 @observer
-export default class Home extends Component {
+export default class Treatment extends Component {
 	constructor(props) {
 		super(props);
     this.store = this.props.store;
@@ -30,128 +30,17 @@ export default class Home extends Component {
     const store = this.store;
 
 		return (
-			<div className="page home">
+			<div className="page treatmentContainer">
         <div className='header'>
           <div className='buttons'>
-            <a href='/prices'>
-              <div className='button'>
-                See our Prices
-              </div>
-            </a>
             <div className='button' onClick={this.toggleForm.bind(this)}>
               Make an Appointment
             </div>
           </div>
         </div>
-
-        <div className='form homeForm'>
-          <form>
-            <input placeholder='Nvan:' />
-            <input placeholder='E-post:' />
-            <input placeholder='Telefon:' />
-            <textarea placeholder='Melding:'></textarea>
-            <input type='submit' />
-          </form>
-        </div>
-
-
-        <div className='aboutUs'>
-          <h1>Tannelege Homan Zandi</h1>
-          <h6>We Take Care of More Than Just Your Smile.</h6>
-          <hr />
-          <p>
-            Your dental health is very important to you, and therefore it is also very important to us.
-          </p>
-          <p>
-            Our staff make sure that we take extreme care when handling your dental highgene and we will do everything to make sure it is good.
-          </p>
-          <p>
-            Our Staff are friendly and will make sure that we accomadate your stay to be as pleasent as possible.
-          </p>
-          <p>
-            We have been in this buisness longer than anyone else in Oslo, and we know how to make sure that we finish your procedure as quickly as possible.
-          </p>
-        </div>
-
-        <div className='treatments'>
-          <h1>Our Treatments</h1>
-          <h6>Our Click on a Treatment to Find Out More.</h6>
-          <hr />
-
-          <div className='types'>
-            <div>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Estetisk tannpleie
-                </a>
-              </p>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Reparere tenner
-                </a>
-              </p>
-            </div>
-            <div>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Vanlige problemer
-                </a>
-              </p>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Hull i tennene
-                </a>
-              </p>
-            </div>
-            <div>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Tannløsning
-                </a>
-              </p>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Ny teknologi
-                </a>
-              </p>
-            </div>
-            <div>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Munnhygiene
-                </a>
-              </p>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Barn og ungdom
-                </a>
-              </p>
-            </div>
-            <div>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Tenner og graviditet
-                </a>
-              </p>
-              <p>
-                <a href='/treatment/tannpleie'>
-                  <i className="fa fa-stethoscope"></i>
-                  Implantater
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className='team'>
+        
+        <div className='info'>
+            <div className='team'>
             <h1>Our Team</h1>
             <h6>We Have the Best Dentists & Staff in Oslo.</h6>
             <h6>Click one of our team members to find out more about them.</h6>
@@ -225,7 +114,8 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-			</div>
+        </div>
+      </div>
 		);
 	}
 }
