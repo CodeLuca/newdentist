@@ -30,7 +30,7 @@ export default class Treatment extends Component {
     const store = this.store;
 
 		return (
-			<div className="page treatmentContainer">
+			<div className="page teamContainer">
         <div className='header'>
           <div className='buttons'>
             <div className='button' onClick={this.toggleForm.bind(this)}>
