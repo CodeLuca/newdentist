@@ -78,7 +78,7 @@ export default class App extends Component {
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeSideBar.bind(this)}>&times;</a>
           <a href="/"><b>Home</b></a>
           <a href="#">Rotfylling</a>
-          <a href="#">Vare Medarbeidere</a>
+          <a href="/team">Vare Medarbeidere</a>
           <a href="#">Prisliste</a>
           <a href="#">Vitenskaplige Artikler</a>
           <a href="#">Bilder</a>
